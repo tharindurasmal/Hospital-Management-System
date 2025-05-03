@@ -16,6 +16,16 @@
 </style>
 </head>
 <body>
+
+<%
+    // Check if the user is logged in
+    HttpSession session1 = request.getSession(false);
+    String userEmail = null;
+    if (session1 != null) {
+        userEmail = (String) session1.getAttribute("userEmail");
+    }
+%>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
 	<nav class="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
@@ -47,8 +57,21 @@
 			  </span>
 			
 			  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-			    <a href="register.jsp" class="btn btn-secondary me-md-2" role="button">Register</a>
-    			<a href="login.jsp" class="btn btn-success" role="button">Login</a>
+					  <%
+			            if (userEmail != null) {
+			          %>
+			              <!-- User is logged in -->
+			              <span class="navbar-text text-white">Welcome, <%= userEmail %></span>
+			              <a href="logout" class="btn btn-danger">Logout</a>
+			          <% 
+			            } else {
+			          %>
+			              <!-- User is not logged in -->
+			              <a href="register.jsp" class="btn btn-secondary me-md-2" role="button">Register</a>
+			              <a href="login.jsp" class="btn btn-success" role="button">Login</a>
+			          <% 
+			            }
+			          %>
 			  </div>
 			</div>
 	  </div>

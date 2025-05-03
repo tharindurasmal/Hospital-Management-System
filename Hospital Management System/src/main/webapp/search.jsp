@@ -1,10 +1,29 @@
+<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+<%
+    HttpSession session1 = request.getSession(false); // don't create a new session
+    if (session1 == null || session1.getAttribute("userEmail") == null) {
+        response.sendRedirect("login.jsp");
+        return;
+    }
+    String username = (String) session.getAttribute("userEmail");
+%>
+
+
+<%
+    System.out.println("Session: " + session);
+    System.out.println("User Email: " + session.getAttribute("userEmail"));
+%>
+
+
+
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>search</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 <link rel="stylesheet" href="CSS/bootstrap.min.css">
 
@@ -26,6 +45,7 @@
 </style>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
 	  <div class="container-fluid">
 	    <a class="navbar-brand" href="index.jsp">Mecare</a>
@@ -50,10 +70,14 @@
 			      <i class="bi bi-telephone"></i> +94772801487
 			    </a>
 			  </span>
-			
-			  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    			<a href="login.jsp" class="btn btn-success" role="button"><i class="bi bi-person-fill"></i></a>
-			  </div>
+			  <span class="navbar-text text-white me-3">
+  				Welcome, <%= username %>
+			  </span>
+
+			  
+				<a href="logout" class="btn btn-danger">Logout</a>
+
+			  
 			</div>
 	  </div>
 	  </div>
@@ -118,5 +142,8 @@
       </p>
     </div>
   </footer>		
+  
+
+  
 </body>
 </html>

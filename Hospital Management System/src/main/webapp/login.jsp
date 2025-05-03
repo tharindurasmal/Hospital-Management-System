@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -24,6 +25,9 @@
 	          <a class="nav-link" aria-current="page" href="index.jsp">Home</a>
 	        </li>
 	        <li class="nav-item">
+	          <a class="nav-link" href="appointment.jsp">Appointment</a>
+	        </li>
+	        <li class="nav-item">
 	          <a class="nav-link" href="services.jsp">Servicer</a>
 	        </li>
 	        <li class="nav-item">
@@ -44,6 +48,14 @@
 	  </div>
 	  </div>
 	</nav>	
+		<%
+		    String error = (String) request.getAttribute("error");
+		    if (error != null) {
+		%>
+		    <div class="alert alert-danger"><%= error %></div>
+		<%
+		    }
+		%>
 	<br><br>
 	<div class="container " >
   <div class="row">

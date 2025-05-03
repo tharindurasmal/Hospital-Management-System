@@ -26,6 +26,15 @@
 
 </head>
 <body>
+<%
+    // Check if the user is logged in
+    HttpSession session1 = request.getSession(false);
+    String userEmail = null;
+    if (session1 != null) {
+        userEmail = (String) session1.getAttribute("userEmail");
+    }
+%>
+
 <nav class="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
 	  <div class="container-fluid">
 	    <a class="navbar-brand" href="index.jsp">Mecare</a>
@@ -36,6 +45,9 @@
 	      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 	        <li class="nav-item">
 	          <a class="nav-link" aria-current="page" href="index.jsp">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="appointment.jsp">Appointment</a>
 	        </li>
 	        <li class="nav-item">
 	          <a class="nav-link" href="services.jsp">Servicer</a>
@@ -52,7 +64,21 @@
 			  </span>
 			
 			  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    			<a href="register.jsp" class="btn btn-success" role="button">Register as new User</a>
+    				  <%
+			            if (userEmail != null) {
+			          %>
+			              <!-- User is logged in -->
+			              <span class="navbar-text text-white">Welcome, <%= userEmail %></span>
+			              <a href="logout" class="btn btn-danger">Logout</a>
+			          <% 
+			            } else {
+			          %>
+			              <!-- User is not logged in -->
+			              <a href="register.jsp" class="btn btn-secondary" role="button">Register as new User</a>
+			              <a href="login.jsp" class="btn btn-success" role="button">Login</a>
+			          <% 
+			            }
+			          %>
 			  </div>
 			</div>
 	  </div>
