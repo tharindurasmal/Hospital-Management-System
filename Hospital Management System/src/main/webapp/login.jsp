@@ -63,16 +63,16 @@
   <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-md-6 col-lg-4">
-        <form class="row g-3 bg-light p-4 rounded shadow">
+        <form class="row g-3 bg-light p-4 rounded shadow" action="" method="post">
           
           <div class="col-12">
             <label for="inputEmail4" class="form-label">Email</label>
-            <input type="email" class="form-control form-control-sm" id="inputEmail4">
+            <input type="email" class="form-control form-control-sm" id="inputEmail4" name="email">
           </div>
 
           <div class="col-12">
             <label for="inputPassword4" class="form-label">Password</label>
-            <input type="password" class="form-control form-control-sm" id="inputPassword4">
+            <input type="password" class="form-control form-control-sm" id="inputPassword4" name="password">
           </div>
           
           <div class="col-12 text-center">
