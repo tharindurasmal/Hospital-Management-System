@@ -1,11 +1,16 @@
 package controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import dao.customerService;
+import model.customer;
 
 
 @WebServlet("/customerLogin")
@@ -25,9 +30,27 @@ public class customerLogin extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		customer cus = new customer();
+		
+		cus.setEmail(request.getParameter("email"));
+		cus.setPassword(request.getParameter("password"));
 		
 		
-		doGet(request, response);
+		customerService service  = new customerService();
+		boolean status = service.validate(cus);
+		
+        System.out.println(status);
+
+		if(status) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("search.jsp");
+			dispatcher.forward(request, response);
+	        
+
+		}else {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+			dispatcher.forward(request, response);
+		}
+		
 	}
 
 }
