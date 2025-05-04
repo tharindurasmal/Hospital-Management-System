@@ -92,7 +92,7 @@
         <div class="card-body">
           <h5 class="card-title">Update Admin Details</h5>
           <p class="card-text">Modify the existing details of admin users including email, role, and status.</p>
-          <a href="updateAdmin.jsp" class="btn btn-warning">Update Details <i class="bi bi-person-fill-add"></i></a>
+          <a href="adminupdate.jsp" class="btn btn-warning">Update Details <i class="bi bi-person-fill-add"></i></a>
         </div>
       </div>
     </div>
@@ -114,7 +114,7 @@
         <div class="card-body">
           <h5 class="card-title">View All Users</h5>
           <p class="card-text">Browse a complete list of registered users, including their roles and activity status.</p>
-          <a href="viewUsers.jsp" class="btn btn-info">View Users <i class="bi bi-view-list"></i></a>
+          <a href="viewAdminServlet" class="btn btn-danger">View Users <i class="bi bi-view-list"></i></a>
         </div>
       </div>
     </div>

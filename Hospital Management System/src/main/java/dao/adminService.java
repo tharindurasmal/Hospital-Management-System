@@ -1,12 +1,19 @@
 package dao;
 
+import java.awt.List;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import model.admin;
 import util.DBConnect;
+
+
+
+
+
 
 public class adminService {
 
@@ -101,4 +108,54 @@ public class adminService {
         }
         return false;  // Return false if deletion failed
     }
+    
+    
+    //update admin
+    public boolean updateAdmin(String originalEmail, admin updatedAdmin) throws ClassNotFoundException {
+        String query = "UPDATE admin SET name = ?, email = ?, password = ?, role = ? WHERE email = ?";
+        try (Connection conn = DBConnect.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+
+            ps.setString(1, updatedAdmin.getName());
+            ps.setString(2, updatedAdmin.getEmail());
+            ps.setString(3, updatedAdmin.getPassword());
+            ps.setString(4, updatedAdmin.getRole());
+            ps.setString(5, originalEmail);
+
+            int rowsAffected = ps.executeUpdate();
+            return rowsAffected > 0;
+
+        } catch (SQLException e) {
+            System.out.println("SQL Error (update): " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
+    }
+    
+    //view admin users
+    public java.util.List<admin> getAllAdmins() throws ClassNotFoundException {
+        java.util.List<admin> adminList = new java.util.ArrayList<>();  // Using fully qualified name
+        String query = "SELECT * FROM admin";
+
+        try (Connection conn = DBConnect.getConnection(); 
+             PreparedStatement ps = conn.prepareStatement(query);
+             ResultSet rs = ps.executeQuery()) {
+
+            while (rs.next()) {
+                admin ad = new admin();  // Create admin object
+                ad.setName(rs.getString("name"));
+                ad.setEmail(rs.getString("email"));
+                ad.setPassword(rs.getString("password"));
+                ad.setRole(rs.getString("role"));
+                adminList.add(ad);  // Add admin to list
+                System.out.println("SQL Error: " + rs.getString("password"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return adminList;  // Return the list of admins
+    }
+
 }
