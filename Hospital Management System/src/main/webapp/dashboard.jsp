@@ -1,3 +1,21 @@
+<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+<%
+    HttpSession session1 = request.getSession(false); // don't create a new session
+    if (session1 == null || session1.getAttribute("userEmail") == null) {
+        response.sendRedirect("adminlogin.jsp");
+        return;
+    }
+    String username = (String) session.getAttribute("userEmail");
+%>
+
+
+<%
+    System.out.println("Session: " + session);
+    System.out.println("User Email: " + session.getAttribute("userEmail"));
+%>
+
+
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -40,8 +58,10 @@
 			  
 			
 			  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    			
-			              <a href="logout" class="btn btn-danger">Logout</a>
+    			<span class="navbar-text text-white me-3">
+  				Welcome, <%= username %>
+			  </span>
+			              <a href="adminLogout" class="btn btn-danger">Logout</a>
 
 			  </div>
 			</div>

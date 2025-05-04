@@ -51,7 +51,7 @@ Admin Login
   <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-md-6 col-lg-4">
-        <form class="row g-3 bg-light p-4 rounded shadow" action="customerLogin" method="post">
+        <form class="row g-3 bg-light p-4 rounded shadow" action="adminLogin" method="post">
           
           <div class="col-12">
             <label for="inputEmail4" class="form-label">Email</label>
