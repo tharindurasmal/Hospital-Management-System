@@ -58,4 +58,47 @@ public class adminService {
 		
 		
 	}
+	
+	
+	// Method to get admin details by email
+    public admin getAdminByEmail(String email) throws ClassNotFoundException {
+        String query = "SELECT * FROM admin WHERE email = ?";
+        try (Connection conn = DBConnect.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+
+            ps.setString(1, email);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    admin ad = new admin();
+                    ad.setName(rs.getString("name"));
+                    ad.setEmail(rs.getString("email"));
+                    ad.setPassword(rs.getString("password"));
+                    ad.setRole(rs.getString("role"));
+                    return ad;
+                }
+            }
+
+        } catch (SQLException e) {
+            System.out.println("SQL Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return null;  // Return null if admin not found
+    }
+
+    // Method to delete admin by email
+    public boolean deleteAdminByEmail(String email) throws ClassNotFoundException {
+        String query = "DELETE FROM admin WHERE email = ?";
+        try (Connection conn = DBConnect.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+
+            ps.setString(1, email);
+            int rowsAffected = ps.executeUpdate();
+            return rowsAffected > 0; // Return true if deletion was successful
+
+        } catch (SQLException e) {
+            System.out.println("SQL Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return false;  // Return false if deletion failed
+    }
 }

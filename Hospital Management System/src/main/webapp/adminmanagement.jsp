@@ -103,7 +103,7 @@
         <div class="card-body">
           <h5 class="card-title">Delete Admin/User</h5>
           <p class="card-text">Remove an admin or general user account permanently from the system database.</p>
-          <a href="deleteUser.jsp" class="btn btn-danger">Delete User <i class="bi bi-trash"></i></a>
+          <a href="admindelete.jsp" class="btn btn-danger">Delete User <i class="bi bi-trash"></i></a>
         </div>
       </div>
     </div>
