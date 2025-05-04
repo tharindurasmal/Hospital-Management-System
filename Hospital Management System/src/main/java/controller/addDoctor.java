@@ -54,7 +54,7 @@ public class addDoctor extends HttpServlet {
 		service.regDoctor(dc);
 		
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("adminreg.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("doctorreg.jsp");
 		dispatcher.forward(request, response);
 	}
 

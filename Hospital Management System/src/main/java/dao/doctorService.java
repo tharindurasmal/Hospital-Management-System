@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.doctor;
@@ -37,4 +38,62 @@ public class doctorService {
 	    }
 	}
 	
+	
+	 // Get doctor details by email
+    public doctor getDoctorByEmail(String email) throws ClassNotFoundException {
+        String query = "SELECT * FROM doctor WHERE email = ?";
+        try (Connection conn = DBConnect.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+
+            ps.setString(1, email);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    doctor dc = new doctor();
+                    dc.setName(rs.getString("name"));
+                    dc.setHospital(rs.getString("hospital"));
+                    dc.setSpeciality(rs.getString("speciality"));
+                    dc.setExperience(rs.getString("experience"));
+                    dc.setContact(rs.getString("contact"));
+                    dc.setEmail(rs.getString("email"));
+                    dc.setCountry(rs.getString("country"));
+                    dc.setGender(rs.getString("gender"));
+                    return dc;
+                }
+            }
+
+        } catch (SQLException e) {
+            System.out.println("SQL Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    // Update doctor details (only name & email for now)
+    public boolean updateDoctor(String originalEmail, doctor updateDoctor) throws ClassNotFoundException {
+        String query = "UPDATE doctor SET name = ?, hospital = ?, speciality = ?, experience = ?, contact = ?, email = ?, country = ?, gender = ? WHERE email = ?";
+        try (Connection conn = DBConnect.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+
+            ps.setString(1, updateDoctor.getName());
+            ps.setString(2, updateDoctor.getHospital());
+            ps.setString(3, updateDoctor.getSpeciality());
+            ps.setString(4, updateDoctor.getExperience());
+            ps.setString(5, updateDoctor.getContact());
+            ps.setString(6, updateDoctor.getEmail());
+            ps.setString(7, updateDoctor.getCountry());
+            ps.setString(8, updateDoctor.getGender());
+            ps.setString(9, originalEmail);
+
+            int rowsAffected = ps.executeUpdate();
+            return rowsAffected > 0;
+
+        } catch (SQLException e) {
+            System.out.println("SQL Error (update): " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
+    
 }
