@@ -34,7 +34,10 @@
 </nav>
 
 <div class="container mt-4">
-    <h3 class="text-center">Update Admin User</h3>
+    <h3 class="text-center">
+    <img alt="img/persom.svg" src="img/edit-info.png" class="rounded-circle mx-auto mb-3 " alt="Doctor Image" style="width: 70px;  height: 70px; object-fit: cover;"><br>
+    
+    Update Admin User</h3>
 
     <!-- Search Form -->
     <form method="get" action="updateAdminServlet" class="d-flex mb-3 justify-content-center">

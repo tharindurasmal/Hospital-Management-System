@@ -42,11 +42,11 @@
 	        </li>
 	        
 	        <li class="nav-item">
-	          <a class="nav-link active" href="adminmanagement.jsp">Admin Users Management</a>
+	          <a class="nav-link" href="adminmanagement.jsp">Admin Users Management</a>
 	        </li>
 	        
 			<li class="nav-item">
-	          <a class="nav-link" href="doctormanagement.jsp">Manage Doctors</a>
+	          <a class="nav-link active" href="doctormanagement.jsp">Manage Doctors</a>
 	        </li>
 	        
 	        <li class="nav-item">
@@ -70,44 +70,61 @@
 <br><br>
 <h3 class="text-center">
 <img alt="img/persom.svg" src="img/registration-form.png" class="rounded-circle mx-auto mb-3 " alt="Doctor Image" style="width: 70px;  height: 70px; object-fit: cover;"><br>
-  Admin Pannel User Registration  
+  Doctor Registration  
 </h3>
 
 <div class="container my-5">
   <div class="row justify-content-center">
     <div class="col-md-8">
     
-      <form class="row g-3 bg-light p-4 rounded shadow" action="addAdmin" method="post">
+      <form class="row g-3 bg-light p-4 rounded shadow" action="addDoctor" method="post">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Name</label>
           <input type="text" class="form-control" id="name" name="name">
         </div>
         
         <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" name="password">
+          <label for="inputEmail4" class="form-label">Hospital</label>
+          <input type="text" class="form-control" id="hospital" name="hospital">
         </div>
         
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputAddress"  name="email">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Specialization</label>
+          <input type="text" class="form-control" id="specialization" name="specialization">
         </div>
         
-        <div class="col-md-4">
-          <label for="inputState" class="form-label">Job Role</label>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Experience</label>
+          <input type="text" class="form-control" id="experience" name="experience">
+        </div>
+        
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Contact</label>
+          <input type="text" class="form-control" id="contact" name="contact">
+        </div>
+        
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+        
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Country</label>
+          <input type="text" class="form-control" id="country" name="country">
+        </div>
+        
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">Gender</label>
           <select id="inputState" class="form-select" name="inputstate">
             <option selected>Choose...</option>
-            <option>User Management</option>
-            <option>Develop</option>
-            <option>Troubleshoot</option>
-            <option>Content Management</option>
-            <option>Security</option>
-            <option>Analytics and Reporting</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
           </select>
         </div>
         
         <div class="col-12 text-center">
-		  <button type="submit" class="btn btn-primary btn-lg">Add User <i class="bi bi-database-add"></i></button>
+		  <button type="submit" class="btn btn-primary btn-lg">Submit <i class="bi bi-database-add"></i></button>
 		  
 		</div>
 

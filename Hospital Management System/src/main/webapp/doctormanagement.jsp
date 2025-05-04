@@ -15,13 +15,14 @@
 %>
 
 
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>User Management</title>
+<title>Doctor Management</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 <link rel="stylesheet" href="CSS/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -69,8 +70,58 @@
 	</nav>	
 <br><br>
 <h3 class="text-center">
-  doctormanagement.jsp
+<img alt="img/doctor.png" src="img/doctor.png" class="rounded-circle mx-auto mb-3" alt="Doctor Image" style="width: 70px; height: 70px; object-fit: cover;"><br>
+  Doctor Management
 </h3>
+<br><br>
+<div class="container" style="max-width: 1500px;">
+  <div class="row">
+    <!-- Register New Doctor -->
+    <div class="col-sm-6 mb-3 mb-sm-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Register New Doctor</h5>
+          <p class="card-text">Create a new doctor profile with the required details to manage patient appointments and medical records.</p>
+          <a href="doctorreg.jsp" class="btn btn-primary">Register Doctor <i class="bi bi-person-plus-fill"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Update Doctor Details -->
+    <div class="col-sm-6 mb-3 mb-sm-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Update Doctor Details</h5>
+          <p class="card-text">Modify the existing details of doctors including specialization, contact details, and working hours.</p>
+          <a href="doctorupdate.jsp" class="btn btn-warning">Update Details <i class="bi bi-person-fill-add"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Doctor -->
+    <div class="col-sm-6 mb-3 mb-sm-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Delete Doctor</h5>
+          <p class="card-text">Remove a doctor profile permanently from the system, including all associated data.</p>
+          <a href="doctordelete.jsp" class="btn btn-danger">Delete Doctor <i class="bi bi-trash"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- View All Doctors -->
+    <div class="col-sm-6 mb-3 mb-sm-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">View All Doctors</h5>
+          <p class="card-text">Browse a complete list of registered doctors, including their specialties, availability, and status.</p>
+          <a href="viewDoctorServlet" class="btn btn-danger">View Doctors <i class="bi bi-view-list"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 </body>
 </html>

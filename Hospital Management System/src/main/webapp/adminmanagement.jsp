@@ -70,6 +70,7 @@
 	</nav>	
 <br><br>
 <h3 class="text-center">
+<img alt="img/doctor.png" src="img/admin.PNG" class="rounded-circle mx-auto mb-3" alt="Doctor Image" style="width: 70px; height: 70px; object-fit: cover;"><br>
   User Management
 </h3>
 <br><br>

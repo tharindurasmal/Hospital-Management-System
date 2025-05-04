@@ -59,7 +59,10 @@
 	</nav>
 
 <div class="container mt-4">
-    <h2 class="text-center mb-4">All Admin Users</h2>
+    <h2 class="text-center mb-4">
+    <img alt="img/persom.svg" src="img/phone-book.png" class="mx-auto mb-3 " alt="Doctor Image" style="width: 70px;  height: 70px; object-fit: cover;"><br>
+    
+    All Admin Users</h2>
 
     <%
         List<admin> adminList = (List<admin>) request.getAttribute("adminList");

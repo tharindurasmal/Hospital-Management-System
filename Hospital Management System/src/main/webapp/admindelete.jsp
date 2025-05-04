@@ -45,7 +45,10 @@
     </nav>
 
     <div class="container mt-4">
-        <h3 class="text-center">User Deletion</h3>
+        <h3 class="text-center">
+            <img alt="img/persom.svg" src="img/delete-user.png" class="rounded-circle mx-auto mb-3 " alt="Doctor Image" style="width: 70px;  height: 70px; object-fit: cover;"><br>
+        
+        User Deletion</h3>
 
         <!-- Search form -->
         <div class="d-flex justify-content-center">
