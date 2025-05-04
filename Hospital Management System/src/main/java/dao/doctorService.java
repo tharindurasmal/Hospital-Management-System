@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import model.admin;
 import model.doctor;
 import util.DBConnect;
 
@@ -94,6 +95,47 @@ public class doctorService {
         }
     }
 
+    // Method to delete admin by email
+    public boolean deleteDoctorByEmail(String email) throws ClassNotFoundException {
+        String query = "DELETE FROM doctor WHERE email = ?";
+        try (Connection conn = DBConnect.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
 
+            ps.setString(1, email);
+            int rowsAffected = ps.executeUpdate();
+            return rowsAffected > 0; // Return true if deletion was successful
+
+        } catch (SQLException e) {
+            System.out.println("SQL Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return false;  // Return false if deletion failed
+    }
     
+    
+    //view admin users
+    public java.util.List<doctor> getAllDoctor() throws ClassNotFoundException {
+        java.util.List<doctor> doctorList = new java.util.ArrayList<>();  // Using fully qualified name
+        String query = "SELECT * FROM doctor";
+
+        try (Connection conn = DBConnect.getConnection(); 
+             PreparedStatement ps = conn.prepareStatement(query);
+             ResultSet rs = ps.executeQuery()) {
+
+            while (rs.next()) {
+                doctor dc = new doctor();  // Create admin object
+                dc.setName(rs.getString("name"));
+                dc.setEmail(rs.getString("email"));
+                dc.setContact(rs.getString("contact"));
+                dc.setHospital(rs.getString("hospital"));
+                doctorList.add(dc);  // Add admin to list
+                System.out.println("SQL Error: " + rs.getString("password"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return doctorList;  // Return the list of admins
+    }
 }
