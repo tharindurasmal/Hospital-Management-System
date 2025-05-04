@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admn User Add</title>
+<title>User Management</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 <link rel="stylesheet" href="CSS/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -50,53 +50,56 @@
 	</nav>	
 <br><br>
 <h3 class="text-center">
-  Admin Pannel User Registration  
+  User Management
 </h3>
+<br><br>
+<div class="container" style="max-width: 1500px;">
+  <div class="row">
+    <!-- Register New Admin User -->
+    <div class="col-sm-6 mb-3 mb-sm-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Register New Admin</h5>
+          <p class="card-text">Create a new administrator account with access to manage system users and content.</p>
+          <a href="adminreg.jsp" class="btn btn-primary">Register Admin  <i class="bi bi-person-plus-fill"></i></a>
+        </div>
+      </div>
+    </div>
 
-<div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-    
-      <form class="row g-3 bg-light p-4 rounded shadow" action="addCustomer" method="post">
-        <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" name="name">
+    <!-- Update Admin Details -->
+    <div class="col-sm-6 mb-3 mb-sm-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Update Admin Details</h5>
+          <p class="card-text">Modify the existing details of admin users including email, role, and status.</p>
+          <a href="updateAdmin.jsp" class="btn btn-warning">Update Details <i class="bi bi-person-fill-add"></i></a>
         </div>
-        
-        <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" name="password">
-        </div>
-        
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputAddress"  name="email">
-        </div>
-        
-        <div class="col-md-4">
-          <label for="inputState" class="form-label">Job Role</label>
-          <select id="inputState" class="form-select" name="inputstate">
-            <option selected>Choose...</option>
-            <option>User Management</option>
-            <option>Develop</option>
-            <option>Troubleshoot</option>
-            <option>Content Management</option>
-            <option>Security</option>
-            <option>Analytics and Reporting</option>
-          </select>
-        </div>
-        
-        <div class="col-12 text-center">
-		  <button type="submit" class="btn btn-primary btn-lg">Add User <i class="bi bi-database-add"></i></button>
-		  
-		</div>
+      </div>
+    </div>
 
-      </form>
-      
+    <!-- Delete User -->
+    <div class="col-sm-6 mb-3 mb-sm-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Delete Admin/User</h5>
+          <p class="card-text">Remove an admin or general user account permanently from the system database.</p>
+          <a href="deleteUser.jsp" class="btn btn-danger">Delete User <i class="bi bi-trash"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- View All Users -->
+    <div class="col-sm-6 mb-3 mb-sm-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">View All Users</h5>
+          <p class="card-text">Browse a complete list of registered users, including their roles and activity status.</p>
+          <a href="viewUsers.jsp" class="btn btn-info">View Users <i class="bi bi-view-list"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
 
 </body>
 </html>
