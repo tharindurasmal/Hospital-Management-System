@@ -103,19 +103,27 @@
           <div class="col-12">
             <select id="inputState" class="form-select form-select-sm">
               <option selected disabled>Any Specialization</option>
-              <option>California</option>
-              <option>Texas</option>
-              <option>Florida</option>
-              
+              <option>Surgeon</option>
+              <option>Psychiatrist</option>
+              <option>Dentist</option>
+              <option>Neurologist</option>
+              <option>Cardiologist</option>
+              <option>Orthopedic</option>
             </select>
           </div>
  		 <div class="col-12">
             <select id="inputState" class="form-select form-select-sm">
               <option selected disabled>Any Hospital</option>
-              <option>California</option>
-              <option>Texas</option>
-              <option>Florida</option>
               
+ 			  <option>wecare-colombo</option>
+				<option>wecare-gampaha</option>
+				<option>wecare-kandy</option>
+				<option>wecare-kurunegala</option>
+				<option>wecare-galle</option>
+				<option>wecare-matara</option>
+				<option>wecare-anuradhapura</option>
+				<option>wecare-ratnapura</option>
+				<option>wecare-batticaloa</option> 			  
             </select>
           </div>
           

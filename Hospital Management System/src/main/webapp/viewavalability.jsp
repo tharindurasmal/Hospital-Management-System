@@ -91,7 +91,7 @@
                         startTime12 = sdf12.format(sdf24.parse(startTime24));
                         endTime12 = sdf12.format(sdf24.parse(endTime24));
                     } catch (Exception e) {
-                        e.printStackTrace(); // Optional: log for debugging
+                        e.printStackTrace(); 
                     }
             %>
                 <tr>
