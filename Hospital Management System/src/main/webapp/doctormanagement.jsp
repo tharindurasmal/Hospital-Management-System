@@ -115,7 +115,7 @@
         <div class="card-body">
           <h5 class="card-title">View All Doctors</h5>
           <p class="card-text">Browse a complete list of registered doctors, including their specialties, availability, and status.</p>
-          <a href="viewDoctorServlet" class="btn btn-dark">View Doctors <i class="bi bi-view-list"></i></a>
+          <a href="viewAvalabilityServelet" class="btn btn-dark">View Doctors <i class="bi bi-view-list"></i></a>
         </div>
       </div>
     </div>

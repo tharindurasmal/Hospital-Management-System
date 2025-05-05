@@ -123,4 +123,63 @@ public class avalabilityService {
 	    }
 	}
 
+	
+/*	 //view admin users
+    public java.util.List<avalability> getAllAvalability() throws ClassNotFoundException {
+        java.util.List<avalability> doctorList = new java.util.ArrayList<>();  // Using fully qualified name
+        String query = "SELECT * FROM doctor_availability";
+
+        try (Connection conn = DBConnect.getConnection(); 
+             PreparedStatement ps = conn.prepareStatement(query);
+             ResultSet rs = ps.executeQuery()) {
+
+            while (rs.next()) {
+            	avalability dc = new avalability();  // Create admin object
+                dc.setWeekday(rs.getString("day_of_week"));
+                dc.setStart_time(rs.getString("start_time"));
+                dc.setEnd_time(rs.getString("end_time"));
+                dc.setLocation(rs.getString("location"));
+                doctorList.add(dc);  
+                
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return doctorList;  // Return the list of admins
+    }
+    */
+	
+	
+	public java.util.List<avalability> getAllAvalability() throws ClassNotFoundException {
+	    java.util.List<avalability> doctorList = new java.util.ArrayList<>();
+	    
+	    String query = "SELECT da.*, d.name AS doctor_name " +
+	                   "FROM doctor_availability da " +
+	                   "INNER JOIN doctor d ON da.doctor_id = d.id";
+
+	    try (Connection conn = DBConnect.getConnection(); 
+	         PreparedStatement ps = conn.prepareStatement(query);
+	         ResultSet rs = ps.executeQuery()) {
+
+	        while (rs.next()) {
+	            avalability dc = new avalability();
+	            dc.setId(rs.getInt("id")); 
+	            dc.setDoctorID(rs.getInt("doctor_id"));
+	            dc.setWeekday(rs.getString("day_of_week"));
+	            dc.setStart_time(rs.getString("start_time"));
+	            dc.setEnd_time(rs.getString("end_time"));
+	            dc.setLocation(rs.getString("location"));
+	            dc.setDoctorName(rs.getString("doctor_name"));
+	            doctorList.add(dc);
+	        }
+
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+
+	    return doctorList;
+	}
+
 }

@@ -7,9 +7,19 @@ public class avalability {
 	String weekday;
 	String start_time;
 	String end_time;
-	
+	String doctor_name;
 	private String location;
 
+	
+	
+	public void setDoctorName(String doctor_name) {
+	    this.doctor_name = doctor_name;
+	}
+	
+	public String getDoctorName() {
+	    return doctor_name;
+	}
+	
 	public String getLocation() {
 	    return location;
 	}
