@@ -115,12 +115,25 @@
         <div class="card-body">
           <h5 class="card-title">View All Doctors</h5>
           <p class="card-text">Browse a complete list of registered doctors, including their specialties, availability, and status.</p>
-          <a href="viewDoctorServlet" class="btn btn-danger">View Doctors <i class="bi bi-view-list"></i></a>
+          <a href="viewDoctorServlet" class="btn btn-dark">View Doctors <i class="bi bi-view-list"></i></a>
         </div>
+      </div>
+    </div>
+    
+<!-- Doctor availability manage -->
+<div class="d-flex justify-content-center align-items-center">
+  <div class="col-sm-6 mb-3 mb-sm-4">
+    <div class="card shadow-sm">
+      <div class="card-body text-center">
+        <h5 class="card-title">Manage Doctor Availability</h5>
+        <p class="card-text">Browse a complete list of registered doctors availability, and manage.</p>
+        <a href="addavalability.jsp" class="btn btn-success">Add Availability <i class="bi bi-person-workspace"></i></a>
+        <a href="updateavalability.jsp" class="btn btn-warning">Update Availability <i class="bi bi-calendar-month"></i></a>       
       </div>
     </div>
   </div>
 </div>
+
 
 
 </body>
