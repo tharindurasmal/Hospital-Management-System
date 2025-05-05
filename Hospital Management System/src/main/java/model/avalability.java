@@ -8,6 +8,17 @@ public class avalability {
 	String start_time;
 	String end_time;
 	
+	private String location;
+
+	public String getLocation() {
+	    return location;
+	}
+
+	public void setLocation(String location) {
+	    this.location = location;
+	}
+
+	
 	public void setId(int id) {
 		this.id = id;
 	}

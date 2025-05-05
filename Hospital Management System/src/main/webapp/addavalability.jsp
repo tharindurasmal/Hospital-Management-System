@@ -106,6 +106,17 @@
           <input type="time" id="end_time" name="end_time" class="form-control" required>
         </div>
         
+        <div class="col-md-14">
+          <label for="inputState" class="form-label">Select Location</label>
+          <select name="location" id="location" class="form-control">
+			  <option value="Colombo">Colombo - WeCare Hospital</option>
+			  <option value="Malabe">Malabe - WeCare Hospital</option>
+			  <option value="Negambo">Negambo - WeCare Hospital</option>
+			  <option value="Jaffna">Jaffna - WeCare Hospital</option>
+			  <option value="Kiribathgoda">Kiribathgoda - WeCare Hospital</option>
+			</select>
+        </div>
+        
         <div class="col-12 text-center">
 		  <button type="submit" class="btn btn-primary btn-lg">Submit <i class="bi bi-database-add"></i></button>
 		  

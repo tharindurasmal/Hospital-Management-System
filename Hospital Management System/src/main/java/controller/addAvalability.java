@@ -50,6 +50,8 @@ public class addAvalability extends HttpServlet {
 	    dc.setWeekday(request.getParameter("weekday"));
 	    dc.setStart_time(request.getParameter("start_time"));
 	    dc.setEnd_time(request.getParameter("end_time"));
+	    dc.setLocation(request.getParameter("location"));
+
 
 	    avalabilityService service = new avalabilityService();
 	    service.avbDoctor(dc);

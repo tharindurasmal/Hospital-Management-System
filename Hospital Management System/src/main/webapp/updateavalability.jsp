@@ -71,6 +71,7 @@
                     <th>Day</th>
                     <th>Start Time</th>
                     <th>End Time</th>
+                    <th>Location</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -81,6 +82,7 @@
                         <td><%= avl.getWeekday() %></td>
                         <td><%= avl.getStart_time() %></td>
                         <td><%= avl.getEnd_time() %></td>
+                        <td><%= avl.getLocation() %></td>
                         <td>
 							<button class="btn btn-warning btn-sm edit-btn"
 					        data-id="<%= avl.getId() %>"

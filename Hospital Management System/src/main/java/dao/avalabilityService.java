@@ -15,7 +15,7 @@ public class avalabilityService {
 
 	
 	public void avbDoctor(avalability dc) {
-	    String query = "INSERT INTO doctor_availability (doctor_id, day_of_week, start_time, end_time) VALUES (?, ?, ?, ?)";
+	    String query = "INSERT INTO doctor_availability (doctor_id, day_of_week, start_time, end_time, location) VALUES (?, ?, ?, ?, ?)";
 
 	    try (Connection conn = DBConnect.getConnection();
 	         PreparedStatement ps = conn.prepareStatement(query)) {
@@ -24,6 +24,7 @@ public class avalabilityService {
 	        ps.setString(2, dc.getWeekday());
 	        ps.setString(3, dc.getStart_time());
 	        ps.setString(4, dc.getEnd_time());
+	        ps.setString(5, dc.getLocation());
 
 	        ps.executeUpdate();
 	        System.out.println("Availability inserted successfully!");
@@ -82,6 +83,7 @@ public class avalabilityService {
 	                dc.setWeekday(rs.getString("day_of_week"));
 	                dc.setStart_time(rs.getString("start_time"));
 	                dc.setEnd_time(rs.getString("end_time"));
+	                dc.setLocation(rs.getString("location"));
 	                doctorAvailabilityList.add(dc);
 	                System.out.println("id"+rs.getInt("id"));
 
