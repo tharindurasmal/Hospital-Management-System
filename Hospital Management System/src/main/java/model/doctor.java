@@ -9,6 +9,44 @@ public class doctor {
 	String email;
 	String country;
 	String gender;
+	String start_time;
+	String weekday;
+	String end_time;
+	String location;
+	int id;
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public int getId() {
+		return id;
+	}
+public String getWeekday() {
+	return weekday;
+}
+public void setWeekday(String weekday) {
+	this.weekday = weekday;
+}
+public String getStart_time() {
+	return start_time;
+}
+public void setStart_time(String start_time) {
+	this.start_time = start_time;
+}
+public String getEnd_time() {
+	return end_time;
+}
+public void setEnd_time(String end_time) {
+	this.end_time = end_time;
+}
+	
+	public String getLocation() {
+	    return location;
+	}
+
+	public void setLocation(String location) {
+	    this.location = location;
+	}
 	public String getName() {
 		return name;
 	}

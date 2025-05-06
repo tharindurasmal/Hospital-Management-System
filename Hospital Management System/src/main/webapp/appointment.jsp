@@ -94,42 +94,40 @@
       	<div class="alert alert-success" role="alert">
   			Book an Appointment and Save upto Rs.400/=
 		</div>
-        <form class="row g-3 bg-light p-4 rounded shadow">
+        <form action="SearchDoctorServlet" method="post"  class="row g-3 bg-light p-4 rounded shadow" >
 
           <div class="col-12">
-            <input type="email" class="form-control form-control-sm" id="inputEmail4" placeholder="Doctor - Max 20 Characters">
+            <input type="email" class="form-control form-control-sm" id="inputEmail4" name="name" placeholder="Doctor - Max 20 Characters">
           </div>
 
           <div class="col-12">
-            <select id="inputState" class="form-select form-select-sm">
+            <select id="inputState" class="form-select form-select-sm" name="specialization">
               <option selected disabled>Any Specialization</option>
-              <option>Surgeon</option>
-              <option>Psychiatrist</option>
-              <option>Dentist</option>
-              <option>Neurologist</option>
-              <option>Cardiologist</option>
-              <option>Orthopedic</option>
+              <option value="Surgeon">Surgeon</option>
+              <option value="Psychiatrist">Psychiatrist</option>
+              <option value="Dentist">Dentist</option>
+              <option value="Neurologist">Neurologist</option>
+              <option value="Cardiologist">Cardiologist</option>
+              <option value="Orthopedic">Orthopedic</option>
             </select>
           </div>
  		 <div class="col-12">
-            <select id="inputState" class="form-select form-select-sm">
+            <select id="inputState" class="form-select form-select-sm" name="hospital">
               <option selected disabled>Any Hospital</option>
               
- 			  <option>wecare-colombo</option>
-				<option>wecare-gampaha</option>
-				<option>wecare-kandy</option>
-				<option>wecare-kurunegala</option>
-				<option>wecare-galle</option>
-				<option>wecare-matara</option>
-				<option>wecare-anuradhapura</option>
-				<option>wecare-ratnapura</option>
-				<option>wecare-batticaloa</option> 			  
+ 			    <option value="colombo">wecare-colombo</option>
+				<option value="gampaha">wecare-gampaha</option>
+				<option value="kandy">wecare-kandy</option>
+				<option value="kurunegala">wecare-kurunegala</option>
+				<option value="galle">wecare-galle</option>
+				<option value="matara">wecare-matara</option>
+				<option value="anuradhapura">wecare-anuradhapura</option>
+				<option value="ratnapura">wecare-ratnapura</option>
+				<option value="batticaloa">wecare-batticaloa</option> 			  
             </select>
           </div>
           
-          <div class="col-12">
-			  <input type="date" class="form-control form-control-sm" id="inputDate" placeholder="Select a date">
-		 </div>
+          
           
           <div class="col-12 text-center">
             <button type="submit" class="btn btn-success btn-lg">Search <i class="bi bi-search"></i> </button>
