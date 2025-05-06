@@ -97,7 +97,7 @@
         <form action="SearchDoctorServlet" method="post"  class="row g-3 bg-light p-4 rounded shadow" >
 
           <div class="col-12">
-            <input type="email" class="form-control form-control-sm" id="inputEmail4" name="name" placeholder="Doctor - Max 20 Characters">
+            <input type="text" class="form-control form-control-sm" id="inputEmail4" name="name" placeholder="Doctor - Max 20 Characters">
           </div>
 
           <div class="col-12">

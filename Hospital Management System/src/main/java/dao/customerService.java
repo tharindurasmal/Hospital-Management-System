@@ -85,7 +85,7 @@ public class customerService {
 	        query.append(" AND speciality LIKE ?");
 	    }
 	    if (hospital != null && !hospital.isEmpty()) {
-	        query.append(" OR location LIKE ?");
+	        query.append(" AND location LIKE ?");
 	    }/*
 	    if (date != null && !date.isEmpty()) {
 	        query.append(" AND day_of_week = ?"); // Assuming your table has a 'date' column
