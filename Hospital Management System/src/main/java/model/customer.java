@@ -1,7 +1,7 @@
 package model;
 
 public class customer {
-	
+    private int patientId;
 	String email;
 	String password;
 	String address1;
@@ -9,7 +9,22 @@ public class customer {
 	String city;
 	String state;
 	String zip;
-	
+    private String nic;
+
+    public String getNic() {
+        return nic;
+    }
+
+    public void setNic(String nic) {
+        this.nic = nic;
+    }
+	public int getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
+    }
 	public String getEmail() {
 		return email;
 	}

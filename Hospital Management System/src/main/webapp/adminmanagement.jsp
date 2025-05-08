@@ -32,37 +32,34 @@
 
 	<nav class="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
 	  <div class="container-fluid">
-	    <a class="navbar-brand" href="dashboard.jsp">Mecare</a>
+	    <a class="navbar-brand" href="dashboard.jsp">Wecare</a>
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
 	    <div class="collapse navbar-collapse" id="navbarText">
-	      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li class="nav-item">
-	          <a class="nav-link" aria-current="page" href="dashboard.jsp">Dashboard</a>
-	        </li>
-	        
-	        <li class="nav-item">
-	          <a class="nav-link active" href="adminmanagement.jsp">Admin Users Management</a>
-	        </li>
-	        
-			<li class="nav-item">
-	          <a class="nav-link" href="doctormanagement.jsp">Manage Doctors</a>
-	        </li>
-	        
-	        <li class="nav-item">
-	          <a class="nav-link" href="bookingmanagement.jsp">View Bookings</a>
-	        </li>
-	      </ul>
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link" aria-current="page" href="dashboard.jsp">Dashboard</a>
+		        </li>
+		        
+		        <li class="nav-item">
+		          <a class="nav-link active" href="adminmanagement.jsp">Admin Users Management</a>
+		        </li>
+		        
+				<li class="nav-item">
+		          <a class="nav-link" href="doctormanagement.jsp">Manage Doctors</a>
+		        </li>
+		        
+		        <li class="nav-item">
+		          <a class="nav-link" href="bookingmanagement.jsp">View Bookings</a>
+		        </li>
+		      </ul>
 			<div class="d-flex align-items-center justify-content-between">
-			  
-			
 			  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
     			<span class="navbar-text text-white me-3">
   				Welcome, <%= username %>
 			  </span>
-			              <a href="logout" class="btn btn-danger">Logout</a>
-
+			  <a href="logout" class="btn btn-danger">Logout</a>
 			  </div>
 			</div>
 	  </div>
@@ -74,53 +71,53 @@
   User Management
 </h3>
 <br><br>
-<div class="container" style="max-width: 1500px;">
-  <div class="row">
-    <!-- Register New Admin User -->
-    <div class="col-sm-6 mb-3 mb-sm-4">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">Register New Admin</h5>
-          <p class="card-text">Create a new administrator account with access to manage system users and content.</p>
-          <a href="adminreg.jsp" class="btn btn-primary">Register Admin  <i class="bi bi-person-plus-fill"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Update Admin Details -->
-    <div class="col-sm-6 mb-3 mb-sm-4">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">Update Admin Details</h5>
-          <p class="card-text">Modify the existing details of admin users including email, role, and status.</p>
-          <a href="adminupdate.jsp" class="btn btn-warning">Update Details <i class="bi bi-person-fill-add"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Delete User -->
-    <div class="col-sm-6 mb-3 mb-sm-4">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">Delete Admin/User</h5>
-          <p class="card-text">Remove an admin or general user account permanently from the system database.</p>
-          <a href="admindelete.jsp" class="btn btn-danger">Delete User <i class="bi bi-trash"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- View All Users -->
-    <div class="col-sm-6 mb-3 mb-sm-4">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">View All Users</h5>
-          <p class="card-text">Browse a complete list of registered users, including their roles and activity status.</p>
-          <a href="viewAdminServlet" class="btn btn-danger">View Users <i class="bi bi-view-list"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+	<div class="container" style="max-width: 1500px;">
+	  <div class="row">
+	    <!-- Register New Admin User -->
+	    <div class="col-sm-6 mb-3 mb-sm-4">
+	      <div class="card shadow-sm">
+	        <div class="card-body">
+	          <h5 class="card-title">Register New Admin</h5>
+	          <p class="card-text">Create a new administrator account with access to manage system users and content.</p>
+	          <a href="adminreg.jsp" class="btn btn-primary">Register Admin  <i class="bi bi-person-plus-fill"></i></a>
+	        </div>
+	      </div>
+	    </div>
+	
+	    <!-- Update Admin Details -->
+	    <div class="col-sm-6 mb-3 mb-sm-4">
+	      <div class="card shadow-sm">
+	        <div class="card-body">
+	          <h5 class="card-title">Update Admin Details</h5>
+	          <p class="card-text">Modify the existing details of admin users including email, role, and status.</p>
+	          <a href="adminupdate.jsp" class="btn btn-warning">Update Details <i class="bi bi-person-fill-add"></i></a>
+	        </div>
+	      </div>
+	    </div>
+	
+	    <!-- Delete User -->
+	    <div class="col-sm-6 mb-3 mb-sm-4">
+	      <div class="card shadow-sm">
+	        <div class="card-body">
+	          <h5 class="card-title">Delete Admin/User</h5>
+	          <p class="card-text">Remove an admin or general user account permanently from the system database.</p>
+	          <a href="admindelete.jsp" class="btn btn-danger">Delete User <i class="bi bi-trash"></i></a>
+	        </div>
+	      </div>
+	    </div>
+	
+	    <!-- View All Users -->
+	    <div class="col-sm-6 mb-3 mb-sm-4">
+	      <div class="card shadow-sm">
+	        <div class="card-body">
+	          <h5 class="card-title">View All Users</h5>
+	          <p class="card-text">Browse a complete list of registered users, including their roles and activity status.</p>
+	          <a href="viewAdminServlet" class="btn btn-danger">View Users <i class="bi bi-view-list"></i></a>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
 </body>
 </html>

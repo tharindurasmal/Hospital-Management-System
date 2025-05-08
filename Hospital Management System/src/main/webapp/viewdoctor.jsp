@@ -57,46 +57,46 @@
 	  </div>
 	  </div>
 	</nav>
-
-<div class="container mt-4">
-    <h2 class="text-center mb-4">
-    <img alt="img/persom.svg" src="img/phone-book.png" class="mx-auto mb-3 " alt="Doctor Image" style="width: 70px;  height: 70px; object-fit: cover;"><br>
-    
-    Doctor List</h2>
-
-    <%
-        List<doctor> doctorList = (List<doctor>) request.getAttribute("doctorList");
-        String error = (String) request.getAttribute("error");
-    %>
-
-    <% if (error != null) { %>
-        <div class="alert alert-danger"><%= error %></div>
-    <% } else if (doctorList != null && !doctorList.isEmpty()) { %>
-        <table class="table table-bordered table-hover">
-            <thead class="table-dark">
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Hospital</th>
-                    <th>Contact</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% for (doctor dc : doctorList) { %>
-                    <tr>
-                        <td><%= dc.getName() %></td>
-                        <td><%= dc.getEmail() %></td>
-                        <td><%= dc.getHospital() %></td>
-                        <td><%= dc.getContact() %></td>
-                    </tr>
-                <% } %>
-            </tbody>
-        </table>
-    <% } else { %>
-        <div class="alert alert-info">No admin users found.</div>
-    <% } %>
-    <a href="viewDoctorServlet" class="btn btn-primary">Refreash</a>
-</div>
+	
+	<div class="container mt-4">
+	    <h2 class="text-center mb-4">
+	    <img alt="img/persom.svg" src="img/phone-book.png" class="mx-auto mb-3 " alt="Doctor Image" style="width: 70px;  height: 70px; object-fit: cover;"><br>
+	    
+	    Doctor List</h2>
+	
+	    <%
+	        List<doctor> doctorList = (List<doctor>) request.getAttribute("doctorList");
+	        String error = (String) request.getAttribute("error");
+	    %>
+	
+	    <% if (error != null) { %>
+	        <div class="alert alert-danger"><%= error %></div>
+	    <% } else if (doctorList != null && !doctorList.isEmpty()) { %>
+	        <table class="table table-bordered table-hover">
+	            <thead class="table-dark">
+	                <tr>
+	                    <th>Name</th>
+	                    <th>Email</th>
+	                    <th>Hospital</th>
+	                    <th>Contact</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+	                <% for (doctor dc : doctorList) { %>
+	                    <tr>
+	                        <td><%= dc.getName() %></td>
+	                        <td><%= dc.getEmail() %></td>
+	                        <td><%= dc.getHospital() %></td>
+	                        <td><%= dc.getContact() %></td>
+	                    </tr>
+	                <% } %>
+	            </tbody>
+	        </table>
+	    <% } else { %>
+	        <div class="alert alert-info">No admin users found.</div>
+	    <% } %>
+	    <a href="viewDoctorServlet" class="btn btn-primary">Refreash</a>
+	</div>
 
 </body>
 </html>

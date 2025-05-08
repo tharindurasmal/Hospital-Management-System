@@ -14,6 +14,14 @@ public class doctor {
 	String end_time;
 	String location;
 	int id;
+	int Did;
+	public void setDId(int Did) {
+		this.Did = Did;
+	}
+	
+	public int getDId() {
+		return Did;
+	}
 	public void setId(int id) {
 		this.id = id;
 	}

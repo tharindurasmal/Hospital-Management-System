@@ -14,31 +14,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Management</title>
+    <title>Doctor Delete</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="dashboard.jsp">Mecare</a>
+            <a class="navbar-brand" href="dashboard.jsp">Wecare</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                        <a class="nav-link" href="dashboard.jsp">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="adminmanagement.jsp">Admin Users Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="doctormanagement.jsp">Manage Doctors</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bookingmanagement.jsp">View Bookings</a>
-                    </li>
-                </ul>
+	                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	                <li class="nav-item">
+	                        <a class="nav-link" href="dashboard.jsp">Dashboard</a>
+	                    </li>
+	                    <li class="nav-item">
+	                        <a class="nav-link" href="adminmanagement.jsp">Admin Users Management</a>
+	                    </li>
+	                    <li class="nav-item">
+	                        <a class="nav-link active" href="doctormanagement.jsp">Manage Doctors</a>
+	                    </li>
+	                    <li class="nav-item">
+	                        <a class="nav-link" href="bookingmanagement.jsp">View Bookings</a>
+	                    </li>
+	                </ul>
                 <div class="d-flex align-items-center justify-content-between">
                     <span class="navbar-text text-white me-3">Welcome, <%= username %></span>
                     <a href="adminLogout" class="btn btn-danger">Logout</a>

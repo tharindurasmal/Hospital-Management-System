@@ -112,6 +112,7 @@ public class customerService {
 	        try (ResultSet rs = ps.executeQuery()) {
 	            while (rs.next()) {
 	                doctor dc = new doctor();
+	                dc.setDId(rs.getInt("d.id"));
 	                dc.setId(rs.getInt("da.id"));
 	                dc.setName(rs.getString("name"));
 	                dc.setHospital(rs.getString("hospital"));

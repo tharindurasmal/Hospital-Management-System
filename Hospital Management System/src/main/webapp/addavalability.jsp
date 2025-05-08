@@ -21,7 +21,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admn User Add</title>
+<title>Add Admin User</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 <link rel="stylesheet" href="CSS/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -31,7 +31,7 @@
 
 	<nav class="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
 	  <div class="container-fluid">
-	    <a class="navbar-brand" href="dashboard.jsp">Mecare</a>
+	    <a class="navbar-brand" href="dashboard.jsp">Wecare</a>
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
@@ -40,31 +40,25 @@
 	        <li class="nav-item">
 	          <a class="nav-link" aria-current="page" href="dashboard.jsp">Dashboard</a>
 	        </li>
-	        
 	        <li class="nav-item">
 	          <a class="nav-link" href="adminmanagement.jsp">Admin Users Management</a>
-	        </li>
-	        
+	        </li>  
 			<li class="nav-item">
 	          <a class="nav-link active" href="doctormanagement.jsp">Manage Doctors</a>
-	        </li>
-	        
+	        </li> 
 	        <li class="nav-item">
 	          <a class="nav-link" href="bookingmanagement.jsp">View Bookings</a>
 	        </li>
 	      </ul>
 			<div class="d-flex align-items-center justify-content-between">
-			  
-			
 			  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
     			<span class="navbar-text text-white me-3">
   				Welcome, <%= username %>
-			  </span>
-			              <a href="adminLogout" class="btn btn-danger">Logout</a>
-
+			  	</span>
+			    <a href="adminLogout" class="btn btn-danger">Logout</a>
 			  </div>
 			</div>
-	  </div>
+	  	</div>
 	  </div>
 	</nav>	
 <br><br>
@@ -115,19 +109,14 @@
 			  <option value="Jaffna">Jaffna - WeCare Hospital</option>
 			  <option value="Kiribathgoda">Kiribathgoda - WeCare Hospital</option>
 			</select>
-        </div>
-        
-        <div class="col-12 text-center">
-		  <button type="submit" class="btn btn-primary btn-lg">Submit <i class="bi bi-database-add"></i></button>
-		  
-		</div>
-
-      </form>
-      
+        </div>       
+	        <div class="col-12 text-center">
+			  <button type="submit" class="btn btn-primary btn-lg">Submit <i class="bi bi-database-add"></i></button>		  
+			</div>
+      </form>      
     </div>
   </div>
 </div>
-
 
 </body>
 </html>

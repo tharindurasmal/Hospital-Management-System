@@ -15,13 +15,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>All Admin Users</title>
+    <title>Admin Users</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
 	  <div class="container-fluid">
-	    <a class="navbar-brand" href="dashboard.jsp">Mecare</a>
+	    <a class="navbar-brand" href="dashboard.jsp">Wecare</a>
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
@@ -57,44 +57,44 @@
 	  </div>
 	  </div>
 	</nav>
-
-<div class="container mt-4">
-    <h2 class="text-center mb-4">
-    <img alt="img/persom.svg" src="img/phone-book.png" class="mx-auto mb-3 " alt="Doctor Image" style="width: 70px;  height: 70px; object-fit: cover;"><br>
-    
-    All Admin Users</h2>
-
-    <%
-        List<admin> adminList = (List<admin>) request.getAttribute("adminList");
-        String error = (String) request.getAttribute("error");
-    %>
-
-    <% if (error != null) { %>
-        <div class="alert alert-danger"><%= error %></div>
-    <% } else if (adminList != null && !adminList.isEmpty()) { %>
-        <table class="table table-bordered table-hover">
-            <thead class="table-dark">
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% for (admin ad : adminList) { %>
-                    <tr>
-                        <td><%= ad.getName() %></td>
-                        <td><%= ad.getEmail() %></td>
-                        <td><%= ad.getRole() %></td>
-                    </tr>
-                <% } %>
-            </tbody>
-        </table>
-    <% } else { %>
-        <div class="alert alert-info">No admin users found.</div>
-    <% } %>
-    <a href="viewAdminServlet" class="btn btn-primary">Refreash</a>
-</div>
+	
+	<div class="container mt-4">
+	    <h2 class="text-center mb-4">
+	    <img alt="img/persom.svg" src="img/phone-book.png" class="mx-auto mb-3 " alt="Doctor Image" style="width: 70px;  height: 70px; object-fit: cover;"><br>
+	    
+	    All Admin Users</h2>
+	
+	    <%
+	        List<admin> adminList = (List<admin>) request.getAttribute("adminList");
+	        String error = (String) request.getAttribute("error");
+	    %>
+	
+	    <% if (error != null) { %>
+	        <div class="alert alert-danger"><%= error %></div>
+	    <% } else if (adminList != null && !adminList.isEmpty()) { %>
+	        <table class="table table-bordered table-hover">
+	            <thead class="table-dark">
+	                <tr>
+	                    <th>Name</th>
+	                    <th>Email</th>
+	                    <th>Role</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+	                <% for (admin ad : adminList) { %>
+	                    <tr>
+	                        <td><%= ad.getName() %></td>
+	                        <td><%= ad.getEmail() %></td>
+	                        <td><%= ad.getRole() %></td>
+	                    </tr>
+	                <% } %>
+	            </tbody>
+	        </table>
+	    <% } else { %>
+	        <div class="alert alert-info">No admin users found.</div>
+	    <% } %>
+	    <a href="viewAdminServlet" class="btn btn-primary">Refreash</a>
+	</div>
 
 </body>
 </html>

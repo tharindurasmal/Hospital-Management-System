@@ -14,7 +14,7 @@
 
 	<nav class="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
 	  <div class="container-fluid">
-	    <a class="navbar-brand" href="index.jsp">Mecare</a>
+	    <a class="navbar-brand" href="index.jsp">Wecare</a>
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
@@ -48,79 +48,79 @@
 	  </div>
 	</nav>	
 <br><br>
-<h3 class="text-center">
-  Register  
-</h3>
-
-<div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-    
-      <form class="row g-3 bg-light p-4 rounded shadow" action="addCustomer" method="post">
-        <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" name="email">
-        </div>
-        
-        <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" name="password">
-        </div>
-        
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address1">
-        </div>
-        
-        <div class="col-12">
-          <label for="inputAddress2" class="form-label">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address2">
-        </div>
-        
-        <div class="col-md-6">
-          <label for="inputCity" class="form-label">City</label>
-          <input type="text" class="form-control" id="inputCity" name="city">
-        </div>
-        
-        <div class="col-md-4">
-          <label for="inputState" class="form-label">State</label>
-          <select id="inputState" class="form-select" name="inputstate">
-            <option selected>Choose...</option>
-            <option>Western</option>
-            <option>Central</option>
-            <option>Southern</option>
-            <option>Eastern</option>
-            <option>Northern</option>
-            <option>North Western</option>
-            <option>North Central</option>
-            <option>Sabaragamuwa</option>
-            <option>Uva</option>
-          </select>
-        </div>
-        
-        <div class="col-md-2">
-          <label for="inputZip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="inputZip" name="zip">
-        </div>
-        
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Agree to provide details
-            </label>
-          </div>
-        </div>
-        
-        <div class="col-12 text-center">
-		  <button type="submit" class="btn btn-primary btn-lg">Sign up</button>
-		</div>
-
-      </form>
-      
-    </div>
-  </div>
-</div>
+	<h3 class="text-center">
+	  Register  
+	</h3>
+	
+	<div class="container my-5">
+	  <div class="row justify-content-center">
+	    <div class="col-md-8">
+	    
+	      <form class="row g-3 bg-light p-4 rounded shadow" action="addCustomer" method="post">
+	        <div class="col-md-6">
+	          <label for="inputEmail4" class="form-label">Email</label>
+	          <input type="email" class="form-control" id="inputEmail4" name="email">
+	        </div>
+	        
+	        <div class="col-md-6">
+	          <label for="inputPassword4" class="form-label">Password</label>
+	          <input type="password" class="form-control" id="inputPassword4" name="password">
+	        </div>
+	        
+	        <div class="col-12">
+	          <label for="inputAddress" class="form-label">Address</label>
+	          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address1">
+	        </div>
+	        
+	        <div class="col-12">
+	          <label for="inputAddress2" class="form-label">Address 2</label>
+	          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address2">
+	        </div>
+	        
+	        <div class="col-md-6">
+	          <label for="inputCity" class="form-label">City</label>
+	          <input type="text" class="form-control" id="inputCity" name="city">
+	        </div>
+	        
+	        <div class="col-md-4">
+	          <label for="inputState" class="form-label">State</label>
+	          <select id="inputState" class="form-select" name="inputstate">
+	            <option selected>Choose...</option>
+	            <option>Western</option>
+	            <option>Central</option>
+	            <option>Southern</option>
+	            <option>Eastern</option>
+	            <option>Northern</option>
+	            <option>North Western</option>
+	            <option>North Central</option>
+	            <option>Sabaragamuwa</option>
+	            <option>Uva</option>
+	          </select>
+	        </div>
+	        
+	        <div class="col-md-2">
+	          <label for="inputZip" class="form-label">Zip</label>
+	          <input type="text" class="form-control" id="inputZip" name="zip">
+	        </div>
+	        
+	        <div class="col-12">
+	          <div class="form-check">
+	            <input class="form-check-input" type="checkbox" id="gridCheck">
+	            <label class="form-check-label" for="gridCheck">
+	              Agree to provide details
+	            </label>
+	          </div>
+	        </div>
+	        
+	        <div class="col-12 text-center">
+			  <button type="submit" class="btn btn-primary btn-lg">Sign up</button>
+			</div>
+	
+	      </form>
+	      
+	    </div>
+	  </div>
+	</div>
 
 
 </body>
