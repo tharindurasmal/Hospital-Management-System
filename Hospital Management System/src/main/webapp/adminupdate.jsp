@@ -23,7 +23,7 @@
 	        <a class="navbar-brand" href="dashboard.jsp">Wecare</a>
 	        <div class="collapse navbar-collapse" id="navbarText">
 	            <ul class="navbar-nav me-auto">
-	            	<li class="nav-item"><a class="nav-link" href="dashboard.jsp">Dashboard</a></li>
+	            	<li class="nav-item"><a class="nav-link" href="DashboardServlet">Dashboard</a></li>
 	                <li class="nav-item"><a class="nav-link active" href="adminmanagement.jsp">Admin Users Management</a></li>
 	                <li class="nav-item"><a class="nav-link" href="doctormanagement.jsp">Manage Doctors</a></li>
 	                <li class="nav-item"><a class="nav-link" href="bookingmanagement.jsp">View Bookings</a></li>

@@ -153,4 +153,18 @@ public class BookingDAO {
 
 	    return bookingList;
 	}
+	
+	public int getBookingCount() throws SQLException, ClassNotFoundException {
+	    int count = 0;
+	    String query = "SELECT COUNT(*) FROM booking";
+	    try (Connection conn = DBConnect.getConnection();
+	         PreparedStatement ps = conn.prepareStatement(query);
+	         ResultSet rs = ps.executeQuery()) {
+	        if (rs.next()) {
+	            count = rs.getInt(1);
+	        }
+	    }
+	    return count;
+	}
+
 }

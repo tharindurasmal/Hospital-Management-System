@@ -138,4 +138,18 @@ public class doctorService {
 
         return doctorList;  // Return the list of admins
     }
+    
+    public int getDoctorCount() throws SQLException, ClassNotFoundException {
+        int count = 0;
+        String query = "SELECT COUNT(*) FROM doctor";
+        try (Connection conn = DBConnect.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query);
+             ResultSet rs = ps.executeQuery()) {
+            if (rs.next()) {
+                count = rs.getInt(1);
+            }
+        }
+        return count;
+    }
+
 }
