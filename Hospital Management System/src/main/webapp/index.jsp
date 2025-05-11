@@ -8,6 +8,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 <link rel="stylesheet" href="CSS/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
 <style>
   #carouselExampleAutoplaying .carousel-item img {
     height: 560px; 
@@ -81,13 +83,13 @@
 	<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
 	  <div class="carousel-inner">
 	    <div class="carousel-item active">
-	      <img src="img/banner1.webp" class="d-block w-100" alt="First slide">
+	      <img src="img/banner15.png" class="d-block w-100" alt="First slide">
 	    </div>
 	    <div class="carousel-item">
-	      <img src="img/banner2.jpg" class="d-block w-100" alt="Second slide">
+	      <img src="img/banner8.png" class="d-block w-100" alt="Second slide">
 	    </div>
 	    <div class="carousel-item">
-	      <img src="img/banner3.webp" class="d-block w-100" alt="Third slide">
+	      <img src="img/banner14.png" class="d-block w-100" alt="Third slide">
 	    </div>
 	  </div>
 	  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">

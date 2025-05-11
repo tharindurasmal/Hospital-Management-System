@@ -16,6 +16,7 @@
 <head>
     <title>Session List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
