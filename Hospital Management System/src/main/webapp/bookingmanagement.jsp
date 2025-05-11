@@ -24,14 +24,14 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 	<nav class="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
 	  <div class="container-fluid">
-	    <a class="navbar-brand" href="dashboard.jsp">Wecare</a>
+	    <a class="navbar-brand" href="DashboardServlet">Wecare</a>
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
 	    <div class="collapse navbar-collapse" id="navbarText">
 		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		        <li class="nav-item">
-		          <a class="nav-link active" aria-current="page" href="DashboardServlet">Dashboard</a>
+		          <a class="nav-link" aria-current="page" href="DashboardServlet">Dashboard</a>
 		        </li>
 		        
 		        <li class="nav-item">
@@ -43,7 +43,7 @@
 		        </li>
 		        
 		        <li class="nav-item">
-		          <a class="nav-link" href="bookingViewServelet">View Bookings</a>
+		          <a class="nav-link active" href="bookingViewServelet">View Bookings</a>
 		        </li>
 		      </ul>
 			<div class="d-flex align-items-center justify-content-between">
@@ -155,7 +155,7 @@
 	            </tbody>
 	        </table>
 	    <% } else { %>
-	        <div class="alert alert-info">No appointmet to display.</div>
+	        <div class="alert alert-info">No record to display.</div>
 	    <% } %>
 	    <a href="bookingViewServelet" class="btn btn-primary">Refreash</a>
 	</div>

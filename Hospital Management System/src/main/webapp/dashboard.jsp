@@ -33,7 +33,7 @@
 
 	<nav class="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
 	  <div class="container-fluid">
-	    <a class="navbar-brand" href="dashboard.jsp">Wecare</a>
+	    <a class="navbar-brand" href="DashboardServlet">Wecare</a>
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
@@ -72,7 +72,11 @@
 
 <!-- Dashboard Section -->
 <div class="container py-5">
-    <h2 class="text-center mb-4">Admin Dashboard</h2>
+   <h2 class="text-center mb-4 ">
+  Your Control Panel
+</h2>
+
+
     
     <div class="row g-4">
         <div class="col-md-3">
