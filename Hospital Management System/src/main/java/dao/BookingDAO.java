@@ -105,5 +105,52 @@ public class BookingDAO {
 	}
 
 
+	public java.util.List<Booking> getAllBooking(String doctorName) throws ClassNotFoundException {
+	    java.util.List<Booking> bookingList = new java.util.ArrayList<>();
 
+	    String query = "SELECT " +
+	               "  b.booking_id, b.doctor_id, b.patient_id, " +
+	               "  b.patient_name, b.NIC, b.address, b.contact, " +
+	               "  b.pay, b.appointment_date, b.status, " +
+	               "  d.name AS doctor_name, " +
+	               "  da.day_of_week, da.start_time, da.end_time, da.location " +
+	               "FROM booking b " +
+	               "INNER JOIN doctor_availability da ON b.availability_id = da.id " +
+	               "INNER JOIN doctor d ON b.doctor_id = d.id " +
+	               "WHERE LOWER(d.name) LIKE ?";
+
+	    try (Connection conn = DBConnect.getConnection()) {
+	        
+	        PreparedStatement ps = conn.prepareStatement(query);
+	        ps.setString(1, "%" + doctorName + "%");
+
+	        try (ResultSet rs = ps.executeQuery()) {
+	            while (rs.next()) {
+	                Booking booking = new Booking();
+	                booking.setBookingId(rs.getInt("booking_id"));
+	                booking.setDoctorId(rs.getInt("doctor_id"));
+	                booking.setPatientId(rs.getInt("patient_id"));
+	                booking.setPatientName(rs.getString("patient_name"));
+	               // booking.setNIC(rs.getString("NIC"));
+	                booking.setAddress(rs.getString("address"));
+	                booking.setContact(rs.getString("contact"));
+	                booking.setPay(rs.getString("pay"));
+	                booking.setAppointmentDate(rs.getString("appointment_date"));
+	                booking.setStatus(rs.getString("status"));
+	                booking.setDoctorName(rs.getString("doctor_name"));
+	              //  booking.setDayOfWeek(rs.getString("day_of_week"));
+	                booking.setStartTime(rs.getString("start_time"));
+	                booking.setEndTime(rs.getString("end_time"));
+	                booking.setLocation(rs.getString("location"));
+
+	                bookingList.add(booking);
+	            }
+	        }
+
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+
+	    return bookingList;
+	}
 }

@@ -51,7 +51,7 @@
 		        </li>
 		        
 		        <li class="nav-item">
-		          <a class="nav-link" href="bookingmanagement.jsp">View Bookings</a>
+		          <a class="nav-link" href="bookingViewServelet">View Bookings</a>
 		        </li>
 		      </ul>
 			<div class="d-flex align-items-center justify-content-between">
