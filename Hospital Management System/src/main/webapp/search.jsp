@@ -56,7 +56,7 @@
 	            <div class="d-flex align-items-center justify-content-between">
 	                <span class="navbar-text me-4">
 	                    <a href="tel:+94772801487" class="text-decoration-none">
-	                        <i class="bi bi-telephone"></i> +94772801487
+	                        <i class="bi bi-telephone"></i> +9411-2691111
 	                    </a>
 	                </span>
 	                <span class="navbar-text text-white me-3">

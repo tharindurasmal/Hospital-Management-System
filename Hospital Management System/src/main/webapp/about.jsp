@@ -60,7 +60,7 @@
 				<div class="d-flex align-items-center justify-content-between">
 					  <span class="navbar-text me-4">
 					    <a href="tel:+94772801487" class="text-decoration-none">
-					      <i class="bi bi-telephone"></i> +94772801487
+					      <i class="bi bi-telephone"></i> +9411-2691111
 					    </a>
 					  </span>	
 					  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -163,7 +163,7 @@
 		    <div class="container">
 		      <p class="mb-1">© 2025 Wecare Hospital. All rights reserved.</p>
 		      <p class="mb-0">
-		        <a href="tel:+94772801487" class="text-white text-decoration-none me-3">Call: +94 77 280 1487</a>
+		        <a href="tel:+94772801487" class="text-white text-decoration-none me-3">Call: +9411-2691111</a>
 		        <a href="mailto:info@mecare.lk" class="text-white text-decoration-none">Email: info@wecare.lk</a>
 		      </p>
 		    </div>

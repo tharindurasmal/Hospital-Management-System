@@ -54,7 +54,7 @@
 			<div class="d-flex align-items-center justify-content-between">
 			  <span class="navbar-text me-4">
 			    <a href="tel:+94772801487" class="text-decoration-none">
-			      <i class="bi bi-telephone"></i> +94772801487
+			      <i class="bi bi-telephone"></i> +9411-2691111
 			    </a>
 			  </span>
 			
@@ -125,7 +125,7 @@
 	  <!-- Copyright -->
 	  <div class="text-center p-3">
 	    © 2025 Copyright:
-	    <a class="text-reset fw-bold" href="#">Rasmal</a>
+	    <a class="text-reset fw-bold" href="index.jsp">WeCare</a>
 	  </div>
 	  <!-- Copyright -->
 	</footer>
