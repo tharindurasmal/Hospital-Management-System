@@ -1,4 +1,4 @@
-# 🏥 Hospital Management System
+# 🏥 Hospital Management System - GROUP BC (NSBM)
 
 A full-featured Hospital Management System built with **Java (JSP/Servlet)** using **Eclipse IDE**, connected to a **MySQL** database via **JDBC**, and deployed on **Apache Tomcat 9.0.100**. This project provides modules for managing doctors, patients, appointments, and administrators — all via a clean, intuitive web interface.
 
