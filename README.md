@@ -31,3 +31,29 @@ src/
 │       ├── img/             # Images and assets
 │       ├── WEB-INF/         # Web configuration (web.xml)
 │       └── *.jsp            # JSP pages for different modules
+
+
+## 🛠️ Setup Instructions
+Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/hospital-management-system.git
+Import into Eclipse:
+
+File → Import → Existing Maven Project → Select the cloned folder
+
+Configure Database:
+
+Create a MySQL database using MySQL Workbench
+
+Import the provided .sql schema (if available)
+
+Update DB credentials in util/DBConnection.java
+
+Deploy on Tomcat:
+
+Add Apache Tomcat 9.0.100 to Eclipse
+
+Right-click project → Run As → Run on Server
