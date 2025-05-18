@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Book</title>
+    <title>Patient History</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 <link rel="stylesheet" href="CSS/bootstrap.min.css">
@@ -45,10 +45,10 @@
 		        </li>
 		        
 		        <li class="nav-item">
-		          <a class="nav-link active" href="bookingViewServelet">View Bookings</a>
+		          <a class="nav-link" href="bookingViewServelet">View Bookings</a>
 		        </li>
-		         <li class="nav-item">
-		          <a class="nav-link" href="Historypatient.jsp">View Patient History</a>
+		        <li class="nav-item">
+		          <a class="nav-link active" href="Historypatient.jsp">View Patient History</a>
 		        </li>
 		      </ul>
 			<div class="d-flex align-items-center justify-content-between">
@@ -70,10 +70,10 @@
 	    <h2 class="text-center mb-4">
 	    <img alt="img/persom.svg" src="img/phone-book.png" class="mx-auto mb-3 " alt="Doctor Image" style="width: 70px;  height: 70px; object-fit: cover;"><br>
 	    
-	    Booked List</h2>
+	    Patient History</h2>
 	    <!-- Search Form -->
-	    <form method="get" action="bookingViewServelet" class="d-flex mb-3 justify-content-center">
-	        <input class="form-control me-2 w-50" name="doctorName" type="search" placeholder="Search by doctor name">
+	    <form method="get" action="historyServelet" class="d-flex mb-3 justify-content-center">
+	        <input class="form-control me-2 w-50" name="doctorName" type="search" placeholder="Search by Patient NIC">
 	        <button class="btn btn-outline-primary" type="submit">Search</button>
 	    </form>
 
@@ -90,13 +90,17 @@
 	            <thead class="table-dark">
 	                <tr class="text-center">
 	                    
-	                    <th>Doctor</th>
+	                    
 	                    <th>Patient Name</th>
+	                  
+	                    <th>Reason</th>
+	                    <th>Allergies</th>
+	                   
+	                    <th>Date</th>
+	                    <th>Doctor</th>
 	                    <th>Hospital</th>
-	                    <th>Appointment Dates</th>
-	                    <th>Start Time</th>
-	                    <th>End Time</th>
-	                    <th>Status</th>
+	                    <th>CurrentMedications</th>
+	                    <th>Time</th>
 	                </tr>
 	            </thead>
 	            <tbody>
@@ -105,10 +109,14 @@
 	                <% for (Booking dc : doctorList) { %>
 	                    <tr class="text-center">
 	                        
-	                        <td>Dr. <%= dc.getDoctorName() %></td>
+	                       
 	                        <td><%= dc.getPatientName() %></td>
-	                        <td><%= dc.getLocation() %></td>
+	                        <td><%= dc.getMedicalHistory()%></td>
+	                         <td><%= dc.getAllergies()%></td>
 	                        <td><%= dc.getAppointmentDate() %></td>
+	                        <td><%= dc.getDoctorName() %></td>
+	                        <td><%= dc.getLocation() %></td>
+	                        <td><%= dc.getCurrentMedications() %></td>
 	                        <td>
 							    <%
 							        String startTime = dc.getStartTime();
@@ -126,34 +134,7 @@
 							        }
 							    %>
 							</td>
-							<td>
-							    <%
-							        String endTime = dc.getEndTime();
-							        if (endTime != null && !endTime.isEmpty()) {
-							            try {
-							                java.text.SimpleDateFormat inputFormat = new java.text.SimpleDateFormat("HH:mm");
-							                java.text.SimpleDateFormat outputFormat = new java.text.SimpleDateFormat("hh:mm a");
-							                java.util.Date parsedTime = inputFormat.parse(endTime);
-							                out.print(outputFormat.format(parsedTime)); // Format end time
-							            } catch (Exception e) {
-							                out.print(endTime); 
-							            }
-							        } else {
-							            out.print("N/A");
-							        }
-							    %>
-							</td>
 
-	                        <td class="text-center">
-							    <%
-							        String status = dc.getStatus();
-							        if ("confirmed".equalsIgnoreCase(status)) {
-							            out.print("<span class='text-success'>" + status + "</span>"); // Green for confirmed
-							        } else {
-							            out.print("<span class='text-danger'>" + status + "</span>"); // Red for any other status
-							        }
-							    %>
-							</td>
 
 	                    </tr>
 	                <% } %>

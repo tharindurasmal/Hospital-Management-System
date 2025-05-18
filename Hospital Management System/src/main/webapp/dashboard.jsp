@@ -1,5 +1,4 @@
-<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
-
+<%@ page import="javax.servlet.http.*, javax.servlet.*" %>
 <%
     HttpSession session1 = request.getSession(false);
     if (session1 == null || session1.getAttribute("userEmail") == null) {
@@ -31,7 +30,6 @@
     </style>
 </head>
 <body>
-
 	<nav class="navbar navbar-expand-lg  bg-primary" data-bs-theme="dark">
 	  <div class="container-fluid">
 	    <a class="navbar-brand" href="DashboardServlet">Wecare</a>
@@ -53,7 +51,10 @@
 		        </li>
 		        
 		        <li class="nav-item">
-		          <a class="nav-link" href="bookingmanagement.jsp">View Bookings</a>
+		          <a class="nav-link" href="bookingViewServelet">View Bookings</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="Historypatient.jsp">View Patient History</a>
 		        </li>
 		      </ul>
 			<div class="d-flex align-items-center justify-content-between">
@@ -63,8 +64,7 @@
     			<span class="navbar-text text-white me-3">
   				Welcome, <%= username %>
 			  </span>
-			              <a href="logout" class="btn btn-danger">Logout</a>
-
+			  <a href="adminLogout" class="btn btn-danger">Logout</a>
 			  </div>
 			</div>
 	  </div>
@@ -161,6 +161,29 @@
       </div>
       
   </div>
+        <div class="col-md-12 dashboard-card">
+     <a href="Historypatient.jsp" class="text-decoration-none">
+    <div class="card shadow-lg border-0 bg-gradient text-dark p-4" style="background: linear-gradient(135deg, #ffc107, #fff3cd);">
+        <div class="card-body d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <div class="me-4">
+                    <i class="bi bi-people display-4 text-dark bg-white p-3 rounded-circle shadow-sm"></i>
+                </div>
+                <div>
+                    <h5 class="mb-1 fw-semibold">Patient History</h5>
+                    <small class="text-muted">Total records available</small>
+                </div>
+            </div>
+            <div>
+                <h3 class="mb-0 fw-bold text-end">
+                    <%= request.getAttribute("patientCount") != null ? request.getAttribute("patientCount") : "N/A" %>
+                </h3>
+            </div>
+        </div>
+    </div>
+    </a>
+</div>
+
 </div>
 
 

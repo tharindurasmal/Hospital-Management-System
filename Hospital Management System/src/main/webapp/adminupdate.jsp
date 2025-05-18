@@ -28,6 +28,9 @@
 	                <li class="nav-item"><a class="nav-link active" href="adminmanagement.jsp">Admin Users Management</a></li>
 	                <li class="nav-item"><a class="nav-link" href="doctormanagement.jsp">Manage Doctors</a></li>
 	                <li class="nav-item"><a class="nav-link" href="bookingmanagement.jsp">View Bookings</a></li>
+	                 <li class="nav-item">
+		          <a class="nav-link" href="Historypatient.jsp">View Patient History</a>
+		        </li>
 	            </ul>
 	            <span class="navbar-text text-white me-3">Welcome, <%= username %></span>
 	            <a href="logout" class="btn btn-danger">Logout</a>

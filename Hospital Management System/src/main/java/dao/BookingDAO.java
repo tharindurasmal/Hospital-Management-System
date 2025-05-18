@@ -171,4 +171,58 @@ public class BookingDAO {
 	    return count;
 	}
 
+	
+	
+	public java.util.List<Booking> getAllhistory(String NIC) throws ClassNotFoundException {
+	    java.util.List<Booking> bookingList = new java.util.ArrayList<>();
+
+	    String query = "SELECT " +
+	                   "  b.booking_id, b.doctor_id, b.patient_id, b.availability_id, " +
+	                   "  b.patient_name, b.NIC, b.address, b.contact, " +
+	                   "  b.pay, b.appointment_date, b.status, b.medical_history, " +
+	                   "  b.allergies, b.current_medications, " +
+	                   "  d.name AS doctor_name, " +
+	                   "  da.start_time, da.end_time, da.location " +
+	                   "FROM booking b " +
+	                   "INNER JOIN doctor_availability da ON b.availability_id = da.id " +
+	                   "INNER JOIN doctor d ON b.doctor_id = d.id " +
+	                   "WHERE b.NIC = ?";
+
+	    try (Connection conn = DBConnect.getConnection()) {
+	        PreparedStatement ps = conn.prepareStatement(query);
+	        ps.setString(1, NIC);
+
+	        try (ResultSet rs = ps.executeQuery()) {
+	            while (rs.next()) {
+	                Booking booking = new Booking();
+	                booking.setBookingId(rs.getInt("booking_id"));
+	                booking.setDoctorId(rs.getInt("doctor_id"));
+	                booking.setPatientId(rs.getInt("patient_id"));
+	                booking.setAvailabilityId(rs.getInt("availability_id"));
+	                booking.setPatientName(rs.getString("patient_name"));
+	                booking.setNic(rs.getString("NIC"));
+	                booking.setAddress(rs.getString("address"));
+	                booking.setContact(rs.getString("contact"));
+	                booking.setPay(rs.getString("pay"));
+	                booking.setAppointmentDate(rs.getString("appointment_date"));
+	                booking.setStatus(rs.getString("status"));
+	                booking.setMedicalHistory(rs.getString("medical_history"));
+	                booking.setAllergies(rs.getString("allergies"));
+	                booking.setCurrentMedications(rs.getString("current_medications"));
+	                booking.setDoctorName(rs.getString("doctor_name"));
+	            
+	                booking.setStartTime(rs.getString("start_time"));
+	                booking.setEndTime(rs.getString("end_time"));
+	                booking.setLocation(rs.getString("location"));
+
+	                bookingList.add(booking);
+	            }
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+
+	    return bookingList;
+	}
+
 }

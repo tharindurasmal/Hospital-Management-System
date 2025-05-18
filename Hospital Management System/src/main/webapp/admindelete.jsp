@@ -40,6 +40,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="bookingmanagement.jsp">View Bookings</a>
                     </li>
+                     <li class="nav-item">
+		          <a class="nav-link" href="Historypatient.jsp">View Patient History</a>
+		        </li>
                 </ul>
                 <div class="d-flex align-items-center justify-content-between">
                     <span class="navbar-text text-white me-3">Welcome, <%= username %></span>
