@@ -11,7 +11,7 @@ public class BookingDAO {
 
 	// Insert booking
 	public boolean insertBooking(Booking booking) throws ClassNotFoundException {
-	    String query = "INSERT INTO booking (doctor_id, patient_id, availability_id, patient_name, NIC, address, contact, pay, appointment_date, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	    String query = "INSERT INTO booking (doctor_id, patient_id, availability_id, patient_name, NIC, address, contact, pay, appointment_date, status, medical_history, allergies, current_medications) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 	    try (Connection conn = DBConnect.getConnection(); 
 	         PreparedStatement ps = conn.prepareStatement(query)) {
@@ -24,8 +24,12 @@ public class BookingDAO {
 	        ps.setString(6, booking.getAddress());
 	        ps.setString(7, booking.getContact());
 	        ps.setString(8, booking.getPay());
-	        ps.setString(9, booking.getAppointmentDate()); // Make sure this is in 'yyyy-MM-dd' format
+	        ps.setString(9, booking.getAppointmentDate()); 
 	        ps.setString(10, booking.getStatus());
+	        
+	        ps.setString(11, booking.getMedicalHistory());            
+	        ps.setString(12, booking.getAllergies());           
+	        ps.setString(13, booking.getCurrentMedications());
 
 	        return ps.executeUpdate() > 0;
 

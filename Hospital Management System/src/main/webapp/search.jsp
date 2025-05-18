@@ -92,7 +92,7 @@
 	                                <h6 class="mb-1">Dr. <%= dc.getName() %></h6>
 	                                <p class="mb-1"><%= dc.getSpeciality() %></p>
 	                                <p class="mb-1">Wecare Hospital <%= dc.getLocation() %> <%= dc.getWeekday()%> (<%= formattedStart %> - <%= formattedEnd %>)</p>
-									<a href="channel.jsp?availability_id=<%= dc.getId() %>&doctor_id=<%= dc.getDId()%>&day=<%= dc.getWeekday()%>" class="btn btn-outline-primary btn-sm">Book Now</a>
+									<a href="channel.jsp?availability_id=<%= dc.getId() %>&doctor_id=<%= dc.getDId()%>&day=<%= dc.getWeekday()%>&docname=<%= dc.getName()%>&loc=<%= dc.getLocation() %>" class="btn btn-outline-primary btn-sm">Book Now</a>
 	                            </div>
 	                        </div>
 	                    </div>

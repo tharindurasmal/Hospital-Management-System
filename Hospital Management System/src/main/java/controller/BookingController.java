@@ -37,6 +37,11 @@ public class BookingController extends HttpServlet {
             String pay = request.getParameter("pay");
             String appointmentDate = request.getParameter("appointment_date");
             String email = request.getParameter("email");
+            String reason = request.getParameter("reason");
+            String allergies = request.getParameter("allergies");
+            String medications = request.getParameter("medications");
+            String doctorName = request.getParameter("doctorName");
+            String location = request.getParameter("location");
             // Retrieve doctor information
             int doctorId = Integer.parseInt(request.getParameter("doctor_id"));
 
@@ -49,7 +54,7 @@ public class BookingController extends HttpServlet {
             System.out.println("Contact: " + contact);
             System.out.println("Payment: " + pay);
             System.out.println("Appointment Date: " + appointmentDate);
-            System.out.println("Doctor ID: " + doctorId);
+            System.out.println("Doctor : " + doctorName);
 
             // Fetch the patient_id from the customer table using NIC
             BookingDAO bookingDAO = new BookingDAO();
@@ -59,6 +64,8 @@ public class BookingController extends HttpServlet {
             if (patientId != -1) {
                 // Create a new Booking object
                 Booking booking = new Booking();
+                booking.setDoctorName(doctorName);
+                booking.setLocation(location);
                 booking.setDoctorId(doctorId);
                 booking.setPatientId(patientId);
                 booking.setAvailabilityId(availabilityId);
@@ -69,13 +76,20 @@ public class BookingController extends HttpServlet {
                 booking.setPay(pay);
                 booking.setAppointmentDate(appointmentDate);
                 booking.setStatus("Confirmed");  // Set the status to confirmed
+                booking.setMedicalHistory(reason);
+                booking.setAllergies(allergies);
+                booking.setCurrentMedications(medications);
+
 
                 // Insert the booking into the database
                 boolean result = bookingDAO.insertBooking(booking);
 
                 // Redirect based on the result
                 if (result) {
-                    response.sendRedirect("success.jsp");  // Booking was successful
+                	// After successful booking insertion in BookingController servlet
+                	request.setAttribute("booking", booking);
+                	request.getRequestDispatcher("success.jsp").forward(request, response);
+
                 } else {
                     response.sendRedirect("error.jsp");    // Something went wrong
                 }

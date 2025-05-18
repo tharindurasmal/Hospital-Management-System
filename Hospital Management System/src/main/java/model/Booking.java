@@ -19,6 +19,9 @@ public class Booking {
     private String location;
     private String starTime;
     private String endTime;
+    private String reason;
+    private String allergies;
+    private String currentMedications;
     
     // Getters and Setters
     public int getBookingId() {
@@ -148,5 +151,30 @@ public class Booking {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+    
+    
+    public String getMedicalHistory() {
+        return reason;
+    }
+
+    public void setMedicalHistory(String reason) {
+        this.reason = reason;
+    }
+
+    public String getAllergies() {
+        return allergies;
+    }
+
+    public void setAllergies(String allergies) {
+        this.allergies = allergies;
+    }
+
+    public String getCurrentMedications() {
+        return currentMedications;
+    }
+
+    public void setCurrentMedications(String currentMedications) {
+        this.currentMedications = currentMedications;
     }
 }

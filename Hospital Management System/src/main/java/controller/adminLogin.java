@@ -60,7 +60,7 @@ public class adminLogin extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("userEmail", ad.getEmail());
 
-            response.sendRedirect("dashboard.jsp"); // Better than forward for login success
+            response.sendRedirect("DashboardServlet"); // Better than forward for login success
         } else {
             request.setAttribute("error", "Invalid email or password.");
             RequestDispatcher dispatcher = request.getRequestDispatcher("adminlogin.jsp");

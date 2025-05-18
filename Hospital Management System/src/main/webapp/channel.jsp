@@ -45,7 +45,7 @@
 	            <div class="d-flex align-items-center justify-content-between">
 	                <span class="navbar-text me-4">
 	                    <a href="tel:+94772801487" class="text-decoration-none">
-	                        <i class="bi bi-telephone"></i> +94772801487
+	                        <i class="bi bi-telephone"></i> +94772845356
 	                    </a>
 	                </span>
 	                <span class="navbar-text text-white me-3">
@@ -86,6 +86,22 @@
 	                        <label class="form-label">Phone Number</label>
 	                        <input type="number" name="contact" class="form-control" placeholder="07772349902" required>
 	                    </div>
+		                   
+	                    <div class="mb-3 text-start">
+	                        <label class="form-label">Reason for Appointment</label>
+	                        <textarea name="reason" class="form-control" rows="2" placeholder="Describe your symptoms or reason for visit" required></textarea>
+	                    </div>
+	
+	                    <div class="mb-3 text-start">
+	                        <label class="form-label">Do you have any allergies?</label>
+	                        <input type="text" name="allergies" class="form-control" placeholder="e.g., Penicillin, Nuts, None">
+	                    </div>
+	
+	                    <div class="mb-3 text-start">
+	                        <label class="form-label">Current Medications (if any)</label>
+	                        <input type="text" name="medications" class="form-control" placeholder="e.g., Metformin, None">
+	                    </div>
+	                    
 	                    <div class="mb-3 text-start">
 	                        <label class="form-label">Payment Method</label>
 	                        <select name="pay" class="form-select" required>
@@ -101,8 +117,8 @@
 						<input type="hidden" name="availability_id" value="<%= request.getParameter("availability_id") %>">
 						<input type="hidden" name="doctor_id" value="<%= request.getParameter("doctor_id") %>">
 						<input type="hidden" name="patient_id" value="<%= request.getParameter("patient_id") %>">
-						                    
-						                    
+						<input type="hidden" name="doctorName" value="<%= request.getParameter("docname") %>">               
+						   <input type="hidden" name="location" value="<%= request.getParameter("loc") %>">                  
 	                    <button type="submit" class="btn btn-success">Confirm Booking</button>
 	                </form>
 	            </div>

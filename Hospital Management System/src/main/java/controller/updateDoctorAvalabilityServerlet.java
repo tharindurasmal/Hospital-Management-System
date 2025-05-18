@@ -27,31 +27,7 @@ public class updateDoctorAvalabilityServerlet extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-/*
- // Fetch doctor by email (GET method)
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	String searchIdParam = request.getParameter("searcID");
 
-        if (searchIdParam != null && !searchIdParam.isEmpty()) {
-            try {
-                int searchID = Integer.parseInt(searchIdParam);
-
-                avalability foundDoctor = new avalabilityService().getDoctorByID(searchID);
-                if (foundDoctor != null) {
-                    request.setAttribute("foundDoctor", foundDoctor);
-                } else {
-                    request.setAttribute("message", "Doctor not found.");
-                }
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-                request.setAttribute("message", "Error retrieving doctor details.");
-            }
-        }
-
-        RequestDispatcher dispatcher = request.getRequestDispatcher("updateavalability.jsp");
-        dispatcher.forward(request, response);
-    }
-*/
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String searchIdParam = request.getParameter("searcID");
